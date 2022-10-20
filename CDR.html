@@ -1,0 +1,442 @@
+<html lang="en" dir="ltr">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>BaiTapTinh</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CTU.css'>
+
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		#myTable {
+		  font-family: Arial, Helvetica, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+
+		#myTable td, #myTable th {
+		  border: 1px solid #ddd;
+		  padding: 8px;
+		}
+
+		#myTable tr:nth-child(even){background-color: #f2f2f2;}
+
+		#myTable tr:hover {background-color: #ddd;}
+
+		#myTable th {
+		  padding-top: 12px;
+		  padding-bottom: 12px;
+		  text-align: left;
+		  background-color: #04AA6D;
+		  color: white;
+		}
+		</style>
+</head>
+<body onload="count_variable()">
+    <div id="wrapper">
+        <div id="header">
+            <div class="box">
+                <a href="https://www.ctu.edu.vn/">
+                    <img src="CTU.png" alt="Logo" width="100" height="100">
+                </a>
+            </div>
+            <a  href="https://cet.ctu.edu.vn/images/upload/daotao/decuong/KC326.pdf"><p>Công nghệ IoTs và Ứng dụng</p></a>
+        </div>            
+        <div id="left">
+            <ul>
+                <li><a href="CTU.html"> <i class="material-icons">home page</i>Trang chủ</a></li>
+                <li><a href="#"><i class="material-icons">output standard</i>Chuẩn đầu ra</a></li>
+                <li><a href="#">PPDG và NVSV</a></li>
+                <li><a href="#"><i class="material-icons">appreciate</i>Đánh giá</a></li>
+                <li><a href="#"><i class="material-icons">references</i>TLTK</a></li>
+            </ul>
+            <h3>Liên kết</h3>
+            <ul style="background-color: lightblue">
+                <li><a href="https://www.ctu.edu.vn/">CTU</a></li>
+                <li><a href="https://cet.ctu.edu.vn/">Khoa CN</a></li>
+                <li><a href="https://w3schools.com/css">W3School</a></li>
+                <li><a href="https://htql.ctu.edu.vn/htql/login.php">HTQL CTU</a></li>
+            </ul>
+        </div>
+        <div id="right">
+
+
+
+            <form>
+                <h3>DANH SÁCH THÀNH VIÊN NHÓM 13</h3>
+
+                <table border="8"
+                cellpadding="10">
+                    <tr>
+                      <td>STT</td>
+                      <td>  Tên thành viên</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>  Nguyễn Thái Tín</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>  Nguyễn Thái Tâm</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>  Nguyễn Minh Thức</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>  Nguyễn Thị Như Huỳnh</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>  Nguyễn Trọng Phúc</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>  Nguyễn Cát Tường</td>
+                    </tr>
+                  </table>
+                <br>
+                <select id="drop1" onclick="get_selection()">
+                    <option>Nguyễn Thái Tín</option>
+                    <option>Nguyễn Thái Tâm</option>
+                    <option>Nguyễn Minh Thức</option>
+                    <option>Nguyễn Thị Như Huỳnh</option>
+                    <option>Nguyễn Trọng Phúc</option>
+                    <option>Nguyễn Cát Tường</option>
+                </select>
+                <p id="p1"></p>
+                <h3 id="c1"></h3> 
+                <h3>Thông tin từng thành viên</h3>
+                <!-- hiển thị thông tin -->
+                <table id="myTable">
+                  <tr>
+                    <td>Họ tên</td>
+                    <td>Nguyễn Thái Tín</td>
+                  </tr>
+                  <tr>
+                    <td>Ngành</td>
+                    <td>Kỹ thuật Cơ điện tử</td>
+                  </tr>
+                  <tr>
+                    <td>Khoa</td>
+                    <td>Tự động hóa</td>
+                  </tr>
+                </table>
+                <img id="img1" src="Tin.jpg" width="150px" height="150px">
+            </form>
+            <script type="text/javascript">
+                function count_variable(){count=0}
+                function get_selection(){
+        
+                    // var count
+                    // console.log(count++)
+                    document.getElementById("c1").innerHTML="Số lần truy cập: " + count++;
+                    i1 = document.getElementById("p1");
+                    l1 = document.getElementById("drop1").options;
+                    idx = l1.selectedIndex;
+                    
+                    // console.log(idx);
+                    
+                    if (idx == 0){
+                        document.getElementById("img1").src="Tin.jpg"
+                        // i1.innerHTML = "Bạn vừa chọn trưởng nhóm: "+ l1[0].innerHTML;
+                        var table = document.getElementById("myTable");
+                        // hien thị bảng thông tin
+                        document.getElementById("myTable").deleteRow(0);
+                        document.getElementById("myTable").deleteRow(0);
+                        document.getElementById("myTable").deleteRow(0);
+                      var row = table.insertRow(0);
+                      var cell1 = row.insertCell(0);
+                      var cell2 = row.insertCell(1);
+                      cell1.innerHTML = "Khoa";
+                      cell2.innerHTML = "Tự động hóa";
+                      
+                      row = table.insertRow(0);            
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+        
+                      cell1.innerHTML = "Ngành";
+                      cell2.innerHTML = "Kỹ thuật Cơ điện tử";
+                      
+                      row = table.insertRow(0);
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+                      cell1.innerHTML = "Họ tên";
+                      cell2.innerHTML = "Nguyễn Thái Tín";
+        
+                    }else if (idx == 1){
+                        document.getElementById("img1").src="Tam.jpg"
+                        var table = document.getElementById("myTable");
+                        // hien thị bảng thông tin
+                        document.getElementById("myTable").deleteRow(0);
+                        document.getElementById("myTable").deleteRow(0);
+                        document.getElementById("myTable").deleteRow(0);
+                      var row = table.insertRow(0);
+                      var cell1 = row.insertCell(0);
+                      var cell2 = row.insertCell(1);
+                      cell1.innerHTML = "Khoa";
+                      cell2.innerHTML = "Tự động hóa";
+                      
+                      row = table.insertRow(0);            
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+        
+                      cell1.innerHTML = "Ngành";
+                      cell2.innerHTML = "Kỹ thuật Cơ điện tử";
+                      
+                      row = table.insertRow(0);
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+                      cell1.innerHTML = "Họ tên";
+                      cell2.innerHTML = "Nguyễn Thái Tâm";
+                    }else if (idx == 2){
+                        document.getElementById("img1").src="Thuc.png"
+                        var table = document.getElementById("myTable");
+                        document.getElementById("myTable").deleteRow(0);
+                        document.getElementById("myTable").deleteRow(0);
+                        document.getElementById("myTable").deleteRow(0);
+                      var row = table.insertRow(0);
+                      var cell1 = row.insertCell(0);
+                      var cell2 = row.insertCell(1);
+                      cell1.innerHTML = "Khoa";
+                      cell2.innerHTML = "Tự động hóa";
+                      
+                      row = table.insertRow(0);            
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+        
+                      cell1.innerHTML = "Ngành";
+                      cell2.innerHTML = "Kỹ thuật Điều khiển và Tự động hóa";
+                      
+                      row = table.insertRow(0);
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+                      cell1.innerHTML = "Họ tên";
+                      cell2.innerHTML = "Nguyễn Minh Thức";
+                    }else if (idx == 3){
+                        document.getElementById("img1").src="Huynh.png"
+                        var table = document.getElementById("myTable");
+                        // hien thị bảng thông tin
+                        document.getElementById("myTable").deleteRow(0);
+                        document.getElementById("myTable").deleteRow(0);
+                        document.getElementById("myTable").deleteRow(0);
+                      var row = table.insertRow(0);
+                      var cell1 = row.insertCell(0);
+                      var cell2 = row.insertCell(1);
+                      cell1.innerHTML = "Khoa";
+                      cell2.innerHTML = "Tự động hóa";
+                      
+                      row = table.insertRow(0);            
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+        
+                      cell1.innerHTML = "Ngành";
+                      cell2.innerHTML = "Kỹ thuật Điều khiển và Tự động hóa";
+                      
+                      row = table.insertRow(0);
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+                      cell1.innerHTML = "Họ tên";
+                      cell2.innerHTML = "Nguyễn Thị Như Huỳnh";
+                    }else if (idx == 4){
+                        document.getElementById("img1").src="Phuc.png"
+                        var table = document.getElementById("myTable");
+                        // hien thị bảng thông tin
+                        document.getElementById("myTable").deleteRow(0);
+                        document.getElementById("myTable").deleteRow(0);
+                        document.getElementById("myTable").deleteRow(0);
+                      var row = table.insertRow(0);
+                      var cell1 = row.insertCell(0);
+                      var cell2 = row.insertCell(1);
+                      cell1.innerHTML = "Khoa";
+                      cell2.innerHTML = "Tự động hóa";
+                      
+                      row = table.insertRow(0);            
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+        
+                      cell1.innerHTML = "Ngành";
+                      cell2.innerHTML = "Kỹ thuật Cơ điện tử";
+                      
+                      row = table.insertRow(0);
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+                      cell1.innerHTML = "Họ tên";
+                      cell2.innerHTML = "Nguyễn Trọng Phúc";
+                    }else{
+                        document.getElementById("img1").src="Tuong.png"
+                        var table = document.getElementById("myTable");
+                        document.getElementById("myTable").deleteRow(0);
+                        document.getElementById("myTable").deleteRow(0);
+                        document.getElementById("myTable").deleteRow(0);
+                      var row = table.insertRow(0);
+                      var cell1 = row.insertCell(0);
+                      var cell2 = row.insertCell(1);
+                      cell1.innerHTML = "Khoa";
+                      cell2.innerHTML = "Tự động hóa";
+                      
+                      row = table.insertRow(0);            
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+        
+                      cell1.innerHTML = "Ngành";
+                      cell2.innerHTML = "Kỹ thuật Cơ điện tử";
+                      
+                      row = table.insertRow(0);
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+                      cell1.innerHTML = "Họ tên";
+                      cell2.innerHTML = "Nguyễn Cát Tường";
+                    }
+        
+                }
+            </script>
+
+
+
+
+
+
+                <!-- Mục tiêu -->
+                <div style="justify-content: center;
+			display: grid;
+			grid-template-columns: auto;">
+
+			<h1>GIẢI PHƯƠNG TRÌNH BẬC 2</h1>
+			<h3>Phương trình có dạng: a.x^2 + b.x + c = 0</h3><br>
+
+			<label> Hệ số a:
+				<input type="input" id="inp1" onchange="update_value()" placeholder="Hãy
+					nhập vào hệ số a" value="">
+			</label><br>
+
+			<label> Hệ số b:
+				<input type="input" id="inp2" onchange="update_value()" placeholder="Hãy
+					nhập vào hệ số b" value="">
+			</label><br>
+
+			<label> Hệ số c:
+				<input type="input" id="inp3" onchange="update_value()" placeholder="Hãy
+					nhập vào hệ số c" value="">
+			</label><br>
+
+			<label>
+				<input type="button" id="bt_kq" onchange="update_value()" value="KẾT QUẢ">
+			</label>
+
+			<!-- Kết quả phép toán -->
+			<p id="kq"></p>
+            
+		</div>
+
+        <div id="right">
+        <table class ="calculator">
+            <tr>    
+                <td colspan = "3"> <input class = "display-box" type = "text" id = "result" disabled /> </td>
+            
+                <l-- clearScreen() function clear all the values -->
+        
+                <td> <input class = "button" type = "button" value = "C" onclick = "clearscreen()" style ="background-color: #fb9966;" /> </td>
+            </tr>
+            <tr>
+            <I-- display() function display the button-->
+                <td> <input class = "button" type = "button" value ="1" onclick="display('1')"/></td>
+                <td> <input class = "button" type = "button" value ="2" onclick="display('2')"/></td>
+                <td> <input class = "button" type = "button" value ="3" onclick="display('3')"/></td>
+                <td> <input class = "button" type = "button" value ="/" onclick="display('/')"/></td>
+            </tr>
+            <tr>
+                <td> <input class = "button" type = "button" value ="4" onclick="display('4')"/></td>
+                <td> <input class = "button" type = "button" value ="5" onclick="display('5')"/></td>
+                <td> <input class = "button" type = "button" value ="6" onclick="display('6')"/></td>
+                <td> <input class = "button" type = "button" value ="-" onclick="display('-')"/></td>
+            </tr>
+            
+            <tr>
+                <td> <input class = "button" type = "button" value ="7" onclick="display('7')"/></td>
+                <td> <input class = "button" type = "button" value ="8" onclick="display('8')"/></td>
+                <td> <input class = "button" type = "button" value ="9" onclick="display('9')"/></td>
+                <td> <input class = "button" type = "button" value ="+" onclick="display('+')"/></td>
+            </tr>
+        
+            <tr>
+                <td> <input class = "button" type = "button" value ="." onclick="display('.')"/></td>
+                <td> <input class = "button" type = "button" value ="0" onclick="display('0')"/></td>
+                <td> <input class = "button" type = "button" value ="=" onclick="calculate()" style="background-color:  ;" /></td>
+                <td> <input class = "button" type = "button" value ="*" onclick="display('*')"/></td>
+            </tr>
+        </table>
+        </div>
+	<script type="text/javascript" lang="javascript">
+	function update_value() {
+		var a, b, c, x1, x2, delta;
+
+		// lấy hệ số a
+		const tmp_inp1 = document.getElementById("inp1").value;
+		a = parseFloat(tmp_inp1);
+
+		// lấy hệ số b
+		const tmp_inp2 = document.getElementById("inp2").value;
+		b = parseFloat(tmp_inp2);
+
+		// Lấy hệ số c
+		const tmp_inp3 = document.getElementById("inp3").value;
+		c = parseFloat(tmp_inp3);
+
+		// Hiển thị kết quả
+		const kq = document.getElementById("kq");
+		if (isNaN(a) || isNaN(b) || isNaN(c)) {
+			alert("Vui lòng nhập đủ 3 hệ số a, b, c!");
+		}
+		else if (a ==0){
+			x = -c/b;
+			kq.innerHTML = "Phương trình có nghiệm: x = " + x;
+		}else{
+			delta = b * b - 4 * a * c;
+
+			if (delta < 0)
+				kq.innerHTML = "Phương trình vô nghiệm";
+			else if (delta == 0) {
+				const x = -(b / (2 * a));
+				kq.innerHTML = "Phương trình có nghiệp kép: x1 = x2 = " + x;
+			}
+			else if (delta > 0) {
+				x1 = (-b + Math.sqrt(delta)) / (2 * a);
+				x2 = (-b - Math.sqrt(delta)) / (2 * a);
+				kq.innerHTML = "Phương trình có 2 nghiệm: x1 = " + x1 + " và x2 = " + x2;
+			}
+		}
+	}
+    function clearscreen(){
+    document.getElementById("result").value = " ";
+}
+
+//display values
+function display(value){
+    document.getElementById("result").value += value;
+}
+
+//envaluates and return result
+function calculate(){
+    var p = document.getElementById("result").value;
+    var q = eval(p);
+    document.getElementById("result").value = q;
+}
+</script>
+
+
+                
+        </div>
+        <div id="footer">
+            <p>KC326 Course &copy Nguyen Van Khanh - PLC&IIoT Công nghiệp</p>
+        </div>            
+    </div>
+   
+    
+    
+</body>
+</html>
+

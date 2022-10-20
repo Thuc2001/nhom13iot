@@ -1,0 +1,165 @@
+body{
+    font: 100%/125% “Times New Roman”, sans-serif; 
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 0px;
+}
+
+#wrapper{
+    margin: 10px;
+    padding: 0px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+#header {
+    background-color: lightgrey;
+    border-radius: 8px;
+    height: 100px;
+    margin-bottom: 25px;
+}
+
+#header a{
+    text-decoration: none;
+}
+
+#header p{
+    color: darkblue;
+    font-family: Arial;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#footer {
+    clear: both;
+    text-align: center;
+    margin-top: 25px;
+    background-color: lightgrey;
+    border-radius: 6px;
+}
+
+#footer p{
+    font-size: 10pt;
+    font-style: italic;
+    color: blue;
+    padding: 3px;
+}
+
+#left {
+    float: left;
+    width: 25%;
+}
+
+#left ul{
+    background-color: rgb(51, 170, 225);
+    width: 80%;
+    padding-top: 10;
+    padding-bottom: 10;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+    border: 1px solid rgb(229, 11, 153);
+    border-radius: 10px;
+}
+
+#left li a{
+    text-align: left;
+    padding-top: 10;
+    padding-bottom: 10;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    text-decoration: none;
+}
+
+#left li a:hover:not(.active){
+        background-color: rgb(19, 12, 240);
+        color: white;
+        border-radius: 8px;
+}
+
+#left li a.active{
+        background-color: rgb(190, 222, 45);
+        color: white;
+}
+
+
+#right {
+        float: right;
+        width: 75%;
+}
+#right p{
+        margin-right: 0px;
+}
+
+#right img{
+        margin: auto;
+        display: block;
+}
+
+@import url('http://font.googleapis.com/css2?family=Orbitron&display=swap');
+.calculartor {
+    padding: 10px;
+    border-radius: 1em;
+    height: 380px;
+    width: 400px;
+    margin: auto;
+}
+.display-box {
+    font-family: 'Orbitron', sans-serif;
+    border: solid black 0.5px;
+    border-radius: 5px;
+    width: 100%;
+    height: 65%;
+}
+.button {
+    font-family: 'Orbitron', sans-serif;
+    border: solid black 0.5px;
+    width: 100%;
+    height: 70%;
+    border-radius: 5px;
+    outline: none;
+}
+.button: :active {
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+.box {
+    float: left;
+    width: 140;
+    height: 100px;
+    border-radius: 8px;
+    background-color: lightblue;
+}
+
+.box img{
+    margin-left: 20px;
+    z-index: 999;
+   /* cursor: progress;*/
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v139/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+  }
